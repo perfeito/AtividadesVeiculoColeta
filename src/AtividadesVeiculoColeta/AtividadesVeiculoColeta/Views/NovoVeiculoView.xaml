@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AtividadesVeiculoColeta.Views.NovoVeiculoView"
+             Title="Novo veículo">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Insira o novo veículo!"
+                   HorizontalOptions="CenterAndExpand"                   
+                   Margin="0,20,0,0"
+                   Grid.Row="0"/>
+            <StackLayout HorizontalOptions="Fill"
+                         VerticalOptions="Start"
+                         Grid.Row="2"
+                         Margin="30,0,30,0">
+                <Label Text="Nome: "/>
+                <Entry MaxLength="20"
+                       Text="{Binding Nome}"/>
+                <Label Text="Placa: "/>
+                <Entry Placeholder="ABC1234"
+                       Text="{Binding Placa}"
+                       MaxLength="7"/>
+                <Button Text="Inserir"/>
+            </StackLayout>            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
